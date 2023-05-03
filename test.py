@@ -4,5 +4,5 @@ import numpy as np
 
 st.title('DCI test app')
 
-df = pd.read_csv('mockdata.csv')
+df = pd.read_csv('https://github.com/OwClownfish/test/blob/main/mockdata.csv')
 st.table(df)
