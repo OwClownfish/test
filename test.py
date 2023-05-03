@@ -10,4 +10,4 @@ dataframe = pd.read_csv(uploaded_file)
 st.write(dataframe)
 
 st.line_chart(dataframe)
-st.table(dataframe)
+st.table(dataframe,x="schorsingen", y="datum")
