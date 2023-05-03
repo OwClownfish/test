@@ -9,9 +9,10 @@ st.title('DCI test app help50')
 
 uploaded_file = st.file_uploader('Upload a CSV')
     # Can be used wherever a "file-like" object is accepted:
-dataframe = pd.read_csv(uploaded_file)
-
 try:
+    dataframe = pd.read_csv(uploaded_file)
+
+
     st.write(dataframe)
 
     #def parser(x):
