@@ -13,10 +13,13 @@ dataframe = pd.read_csv(uploaded_file)
 
 
 st.write(dataframe)
- 
+fig = pyplot.figure()
+fig.suptitle('matplotlib.pyplot.show() Example')
+st.pyplot(fig)
 def parser(x):
  return datetime.strptime('190'+x, '%Y-%m')
- 
+fig = pyplot.figure()
+fig.suptitle('matplotlib.pyplot.show() Example')
 series = read_csv(dataframe, header=0, parse_dates=[0], index_col=0, date_parser=parser)
 series.index = series.index.to_period('M')
 # fit model
@@ -26,4 +29,4 @@ print(series.head())
 series.plot()
 pyplot.show()
 
-st.pyplot()
+
