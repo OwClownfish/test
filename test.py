@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title('DCI test app')
+st.title('DCI test app help')
 
 uploaded_file = st.file_uploader('Upload a CSV')
     # Can be used wherever a "file-like" object is accepted:
