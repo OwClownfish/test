@@ -1,16 +1,15 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+from matplotlib import pyplot
 st.title('DCI test app help')
 
 uploaded_file = st.file_uploader('Upload a CSV')
     # Can be used wherever a "file-like" object is accepted:
 dataframe = pd.read_csv(uploaded_file)
 
-from pandas import read_csv
-from pandas import datetime
-from matplotlib import pyplot
+
+
  
 def parser(x):
  return datetime.strptime('190'+x, '%Y-%m')
