@@ -4,14 +4,10 @@ import numpy as np
 
 st.title('DCI test app')
 
-st.file_uploader('Upload a CSV')
+uploaded_file = st.file_uploader('Upload a CSV')
+    # Can be used wherever a "file-like" object is accepted:
+dataframe = pd.read_csv(uploaded_file)
+st.write(dataframe)
 
-df = pd.DataFrame(
-   np.random.randn(10, 5),
-   columns=('col %d' % i for i in range(5)))
-
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=['a', 'b', 'c'])
-st.line_chart(chart_data)
-st.table(df)
+st.line_chart(dataframe)
+st.table(dataframe)
