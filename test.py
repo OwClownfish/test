@@ -10,9 +10,7 @@ dataframe = pd.read_csv(uploaded_file)
 
 
 #
-try:
-    st.write(dataframe)
-    st.line_chart(dataframe,x="schorsingen", y="datum")
-    st.table(dataframe)
-except:
-    pass
+
+st.write(dataframe)
+st.line_chart(dataframe,x="schorsingen", y="datum")
+st.table(dataframe)
