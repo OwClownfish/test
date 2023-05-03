@@ -1,7 +1,6 @@
 import streamlit as st
-
+import datetime
 from pandas import read_csv
-from pandas import datetime
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot
