@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot
 from statsmodels.tsa.arima.model import ARIMA
-st.title('DCI test app help5')
+st.title('DCI test app help52')
 
 uploaded_file = st.file_uploader('Upload a CSV')
     # Can be used wherever a "file-like" object is accepted:
@@ -23,7 +23,6 @@ series.index = series.index.to_period('M')
 # fit model
 model = ARIMA(series, order=(5,1,0))
 model_fit = model.fit()
-print(series.head())
 series.plot()
 pyplot.show()
 st.pyplot(fig)
