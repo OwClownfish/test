@@ -4,11 +4,8 @@ import numpy as np
 
 st.title('DCI test app')
 
-DATA_URL = ('https://github.com/OwClownfish/test/blob/main/mockdata.csv')
+df = pd.DataFrame(
+   np.random.randn(10, 5),
+   columns=('col %d' % i for i in range(5)))
 
-def load_data(nrows):
-    data = pd.read_csv(DATA_URL, nrows=nrows)
-    return data
-
-data = load_data(10000)
-st.write(data)
+st.table(df)
